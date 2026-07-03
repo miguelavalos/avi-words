@@ -1,0 +1,30 @@
+{
+  "name": "avi-words",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 8098",
+    "web": "vite --host 127.0.0.1 --port 8098",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run",
+    "verify": "pnpm run typecheck && pnpm run test",
+    "build": "vite build",
+    "deploy:preview": "echo 'Preview deploy is owned by private AVALSYS runbooks. Run the private preflight with intent deploy before adding a real command.' && exit 1",
+    "testflight": "echo 'Avi Words V0 is web-only. TestFlight/native release is owned by private runbooks and is intentionally unavailable.' && exit 1"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "convex": "1.42.1",
+    "vite": "latest",
+    "typescript": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "vitest": "latest"
+  }
+}
