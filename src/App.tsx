@@ -200,8 +200,12 @@ function Arena({
     <main className="arena-layout">
       <section className="hero-panel">
         <div>
+          <span className="eyebrow">Avi word club</span>
           <h1>{t.appName}</h1>
           <p>{t.subtitle}</p>
+        </div>
+        <div className="letter-field" aria-hidden="true">
+          {"AVIWORDS".split("").map((letter, index) => <span key={`${letter}-${index}`}>{letter}</span>)}
         </div>
         <div className="hero-score">
           <strong>{leaderboardCount}</strong>
@@ -219,6 +223,7 @@ function Arena({
                 <span className="game-mode">{game.mode}</span>
                 {!playable ? <span className="soon-label">{t.comingSoon}</span> : null}
               </div>
+              <span className={`game-symbol game-symbol-${gameId}`} aria-hidden="true" />
               <h2>{game.title}</h2>
               <p>{game.summary}</p>
               <div className="game-actions">
